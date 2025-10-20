@@ -7,7 +7,24 @@ export default function Main() {
   const [carrito, setCarrito] = useState([]);
 
   function agregarAlCarrito(producto) {
-    setCarrito((carritoAnt)=>[...carritoAnt, producto])
+    const itemExistente = comprobarStock(producto)
+    console.log("Item ya esta: " + itemExistente)
+    if (itemExistente) {
+      setCarrito(carrito.map((item)=>
+        item.id === producto.id ? {...item, stock: item.stock +1} : item
+      ))
+    }else{
+      const prodCarrito = {...producto}
+      prodCarrito.stock= 1
+      prodCarrito.subTotal = function(){
+      return (this.price * this.stock)
+      }
+      setCarrito((carritoAnt)=>[...carritoAnt, prodCarrito])
+    }
+  }
+
+  function comprobarStock(producto) {
+    return carrito.some((item)=>item.id === producto.id)
   }
 
   function eliminarDelCarrito (indiceAEliminar) {

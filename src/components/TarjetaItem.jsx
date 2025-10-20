@@ -3,7 +3,7 @@ import React from 'react'
 const estiloTarjeta = {
   width: "80%",
   height: "150px",
-  backgroundColor: "#ccebf0",
+  backgroundColor: "#1B7BCF",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-around",
@@ -26,7 +26,7 @@ const m1 = {
 const m2 = {
   width: "60%",
   height: "100%",
-  backgroundColor: "#f0d1cc",
+  backgroundColor: "#CF6F1B",
   flexGrow: 1.5,
   padding: 5,
   display: "flex",
