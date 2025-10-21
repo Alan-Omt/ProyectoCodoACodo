@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const estiloTarjeta = {
   width: "80%",
@@ -63,6 +64,7 @@ export default function TarjetaItem({item, funcionBoton}) {
         <div style={alinear}>
           <h3>Precio {item.price}$</h3>
           <button onClick={()=>funcionBoton()}>Agregar al Carrito</button>
+          <Link to = {`/producto/${item.id}`} > <button>Detalles</button></Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   return (
@@ -14,10 +15,10 @@ export default function Nav() {
         justifyContent: "space-around",
         margin: 0
       }}>
-        <li><a href='#' style={{color: "white", textDecoration: "none"}}>Inicio</a></li>
-        <li><a href='#' style={{color: "white", textDecoration: "none"}}>Proximanente</a></li>
-        <li><a href='#' style={{color: "white", textDecoration: "none"}}>Acerca de</a></li>
-        <li><a href='#' style={{color: "white", textDecoration: "none"}}>Contacto</a></li>
+        <li><Link to ="/" style={{color: "white", textDecoration: "none"}}>Inicio</Link></li>
+        <li><Link to ='/proximamente' style={{color: "white", textDecoration: "none"}}>Proximanente</Link></li>
+        <li><Link to ='/acercaDe' style={{color: "white", textDecoration: "none"}}>Acerca de</Link></li>
+        <li><Link to ='/Contacto' style={{color: "white", textDecoration: "none"}}>Contacto</Link></li>
       </ul>
     </nav>
     </>
